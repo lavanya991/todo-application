@@ -1,0 +1,43 @@
+<section  [ngClass]="isOpen ? 'create-todo-active' : 'create-todo'">
+    <form [formGroup]="form" style="position: relative; height: calc(100vh - 50px);">
+        <div class="title-sec mb-3">
+            <p>create-todo</p>
+            <a (click)="close()">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label class="form-label">title</label>
+                    <input type="text" class="form-control" formControlName="title">
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label class="form-label">priority</label>
+                    <select class="form-select" formControlName="priority">
+                        <!-- <option value="" selected disabled>priority</option> -->
+                        <option value="1">low</option>
+                        <option value="2">medium</option>
+                        <option value="3">high</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label class="form-label">date</label>
+                    <input type="date" class="form-control" formControlName="date">
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-sec">
+            <button type="reset" (click)="close()">close</button>
+            <button type="submit" (click)="submit()">{{ todo ? 'update' : 'submit' }}</button>
+        </div>
+    </form>
+</section>

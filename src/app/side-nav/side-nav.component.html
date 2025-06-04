@@ -1,0 +1,24 @@
+<section [ngClass]="isOpen ? 'side-nav-active' : 'side-nav'">
+    <div class="sub-nav">
+        <div class="d-flex justify-content-between mb-3">
+            <p>menu</p>
+            <a (click)="close()">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+        </div>
+
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="search">
+        </div>
+
+        <div class="nav-links">
+            <a href="" class="nav-link">dashboard</a>
+            <a href="" class="nav-link">tasks</a>
+            <a href="" class="nav-link">settings</a>
+        </div>
+
+        <div class="logout">
+            <button>logout</button>
+        </div>
+    </div>
+</section>

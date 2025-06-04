@@ -1,0 +1,37 @@
+<section class="dashboard" [ngStyle]="{'margin-right': isOpen ? '500px' : ''}">
+    <div class="dashboard-detail" >
+        <div class="d-flex flex-column justify-content-between mb-5">
+            <p class="logo-name mb-3">dashboard</p>
+            <a class="create-task-sec" (click)="openCreateTodo()">
+                <span class="material-symbols-outlined">add</span>
+                <span class="title">add new task</span>
+            </a>
+        </div>
+
+        <div class="todo-list">
+            @for (item of todoList; track $index) {
+            <!-- <div class="todo-item" (click)="getCurrent(item)">
+                <p class="title">{{item.title}}</p>
+            </div> -->
+
+            <div class="card">
+                <div class="card-details">
+                    <p class="text-title">{{item.title}}</p>
+                    <p class="text-body">Here are the details of the card</p>
+                </div>
+
+                <div class="card-button">
+                    <a (click)="getCurrent(item)"><span class="material-symbols-outlined me-1">edit</span></a>
+                    <a (click)="getCurrent(item)"><span class="material-symbols-outlined">delete</span></a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- @if(isOpen) {
+<ng-container> -->
+<app-create-todo [todo]="currentTodo" [isOpen]="isOpen" (closeForm)="closeForm($event)"></app-create-todo>
+<!-- </ng-container>
+} -->

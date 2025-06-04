@@ -1,0 +1,10 @@
+.row {
+    margin: 0 !important;
+}
+
+main {
+    background-color: #ffffff;
+    margin: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
