@@ -1,24 +1,24 @@
 .side-nav {
-    width: 20vw;
-    height: calc(100vh - 50px);
+    width: 200px;
     background-color: #F4F4F4;
+    height: calc(100vh - 50px);
     position: fixed;
     top: 25px;
-    left: -20vw;
-    padding: 20px;
+    left: -200px;
+    padding: 5px;
     border-radius: 5px;
     opacity: 0;
     transition: all ease-in-out 500ms;
 }
 
 .side-nav-active {
-    width: 20vw;
-    height: calc(100vh - 50px);
+    width: 200px;
     background-color: #F4F4F4;
+    height: calc(100vh - 50px);
     position: fixed;
     top: 25px;
     left: 25px;
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
     opacity: 1;
     transition: all ease-in-out 500ms;
@@ -34,9 +34,42 @@
     padding: 10px;
 }
 
-.logout {
-    position: absolute;
-    bottom: 10px;
+.nav-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #3b3939;
+        color: #ffffff;
+    }
 }
 
-.logout button {}
+.nav-link .title {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logout {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+.logout a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #FF6B6B;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.logout .logout-txt {
+    text-transform: uppercase;
+}

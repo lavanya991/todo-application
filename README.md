@@ -2,6 +2,29 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+# Core Features
+
+Add Task – Input form to add new tasks with title/description.
+
+Edit Task – Allow updating of existing tasks.
+
+Delete Task – Remove tasks from the list.
+
+<!-- Mark as Complete/Incomplete – Checkbox or toggle for task status. -->
+
+Persist Data – Store tasks in local storage.
+
+# Architecture & Best Practices
+
+Component-Based – Split UI into components (e.g., TaskList, TaskItem, AddTaskForm).
+
+Use Angular Services – Manage shared data and business logic (e.g., TaskService).
+
+Two-Way Binding – Used Formgroup for input forms.
+
+Use RxJS – Use Observables for reactive patterns and state management.
+
+
 ## Development server
 
 To start a local development server, run:

@@ -1,7 +1,9 @@
-<section  [ngClass]="isOpen ? 'create-todo-active' : 'create-todo'">
+<section [ngClass]="isOpen ? 'create-todo-active' : 'create-todo'">
+
+    <!-- form for creating task -->
     <form [formGroup]="form" style="position: relative; height: calc(100vh - 50px);">
         <div class="title-sec mb-3">
-            <p>create-todo</p>
+            <p class="title">create-todo</p>
             <a (click)="close()">
                 <span class="material-symbols-outlined">close</span>
             </a>
@@ -10,31 +12,42 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3">
-                    <label class="form-label">title</label>
-                    <input type="text" class="form-control" formControlName="title">
+                    <label class="form-label title">title</label>
+                    <input type="text" class="form-control" formControlName="title" required>
                 </div>
             </div>
 
             <div class="col-lg-12">
                 <div class="mb-3">
-                    <label class="form-label">priority</label>
+                    <label class="form-label title">priority</label>
                     <select class="form-select" formControlName="priority">
-                        <!-- <option value="" selected disabled>priority</option> -->
-                        <option value="1">low</option>
-                        <option value="2">medium</option>
-                        <option value="3">high</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
                     </select>
                 </div>
             </div>
 
             <div class="col-lg-12">
                 <div class="mb-3">
-                    <label class="form-label">date</label>
-                    <input type="date" class="form-control" formControlName="date">
+                    <label class="form-label title">status</label>
+                    <select class="form-select" formControlName="status">
+                        <option value="pending">Pending</option>
+                        <option value="inprogress">Inprogress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label class="form-label title">date</label>
+                    <input type="date" class="form-control" formControlName="date" [min]="today">
                 </div>
             </div>
         </div>
 
+        <!-- submit btn -->
         <div class="btn-sec">
             <button type="reset" (click)="close()">close</button>
             <button type="submit" (click)="submit()">{{ todo ? 'update' : 'submit' }}</button>

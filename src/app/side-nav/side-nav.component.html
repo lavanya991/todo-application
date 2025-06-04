@@ -1,9 +1,9 @@
 <section [ngClass]="isOpen ? 'side-nav-active' : 'side-nav'">
     <div class="sub-nav">
         <div class="d-flex justify-content-between mb-3">
-            <p>menu</p>
+            <p class="fw-bold">MENU</p>
             <a (click)="close()">
-                <span class="material-symbols-outlined">close</span>
+                <span class="material-symbols-outlined">menu</span>
             </a>
         </div>
 
@@ -12,13 +12,31 @@
         </div>
 
         <div class="nav-links">
-            <a href="" class="nav-link">dashboard</a>
-            <a href="" class="nav-link">tasks</a>
-            <a href="" class="nav-link">settings</a>
+            <a class="nav-link">
+                <span class="material-symbols-outlined me-1">
+                    dashboard
+                </span>
+                <span class="title">dashboard</span>
+            </a>
+            <a class="nav-link" style="border: 1px solid #FF6B6B;">
+                <span class="material-symbols-outlined me-1">
+                    check_box
+                </span>
+                <span class="title">tasks</span>
+            </a>
+            <a class="nav-link">
+                <span class="material-symbols-outlined me-1">
+                    settings
+                </span>
+                <span class="title">settings</span>
+            </a>
         </div>
 
-        <div class="logout">
-            <button>logout</button>
+        <div class="logout w-100">
+            <a class="d-flex align-item-center justify-content-center" title="logout">
+                <span class="material-symbols-outlined">logout</span>
+               <span class="logout-txt">logout</span>
+            </a>
         </div>
     </div>
 </section>

@@ -1,7 +1,5 @@
 .dashboard {
-    /* height: calc(100vh - 50px); */
-    /* display: flex;
-    align-items: center; */
+    height: calc(100vh - 80px);
     transition: all 500ms ease-in-out;
 }
 
@@ -30,8 +28,8 @@
 .create-task-sec .title {
     margin-left: 10px;
     text-transform: capitalize;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .create-task-sec span {
@@ -42,7 +40,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
-    height: 50vh;
+    height: 60vh;
     overflow-y: auto;
 }
 
@@ -60,14 +58,13 @@
     font-weight: 700;
 } */
 
-/* From Uiverse.io by alexruix */
 .card {
     width: 200px;
     height: 200px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
-    padding: 1.8rem;
+    padding: 5px;
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
@@ -76,21 +73,20 @@
 .card-details {
     color: black;
     height: 100%;
-    gap: .5em;
+    gap: 5px;
     display: grid;
     place-content: center;
 }
 
 .card-button {
     transform: translate(-50%, 125%);
-    width: 60%;
-    border-radius: 1rem;
+    width: 40%;
+    border-radius: 8px;
     border: none;
     text-align: center;
-    background-color: #008bf8;
+    background-color: #7f7f7f;
     color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
+    padding: 3px;
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -103,16 +99,37 @@
 }
 
 .text-title {
-    font-size: 1.5em;
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
     font-weight: bold;
 }
 
 .card:hover {
-    border-color: #008bf8;
+    border-color: #7f7f7f;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
 .card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
+}
+
+.material-symbols-outlined {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.dot-sec {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
 }

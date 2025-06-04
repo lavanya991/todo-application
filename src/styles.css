@@ -15,4 +15,15 @@ p {
 
 a {
     cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.title {
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+}
+
+.dark-theme {
+  background-color: #121212 !important;
+  color: #ffffff !important;
 }
