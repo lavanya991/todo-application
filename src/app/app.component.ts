@@ -25,19 +25,22 @@ export class AppComponent {
           "title": "learn html",
           "priority": "low",
           "status": "completed",
-          "date": "2025-06-30"
+          "date": "2025-06-30",
+          "checked": false
         },
                 {
           "title": "learn css",
           "priority": "medium",
           "status": "inprogress",
-          "date": "2025-06-30"
+          "date": "2025-06-30",
+          "checked": false
         },
                 {
           "title": "learn javascript",
           "priority": "high",
           "status": "pending",
-          "date": "2025-06-30"
+          "date": "2025-06-30",
+          "checked": false
         }
       ]
       localStorage.setItem('todos', JSON.stringify(todos));

@@ -4,10 +4,11 @@ import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
 import Swal from 'sweetalert2';
 import { fromEvent, Observable, Subscription } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CreateTodoComponent, CommonModule],
+  imports: [CreateTodoComponent, CommonModule, FormsModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -46,6 +47,23 @@ export class DashboardComponent {
   getCurrent(data: any): void {
     this.isOpen = true;
     this.currentTodo = data;
+  }
+
+  getStriked(data: any): void {
+    let x: Array<any> = this.api_service.getTodos();
+    x.map((item, i) => {
+      if (item.title == data.title) {
+        x[i] = data;
+      }
+    });
+    localStorage.setItem('todos', JSON.stringify(x));
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Task updated successfully!",
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   deleteCurrent(data: any): void {

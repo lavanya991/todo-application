@@ -3,8 +3,8 @@
         <div class="d-flex flex-column justify-content-between">
             <p class="logo-name mb-3">TASKS LIST</p>
             <a class="create-task-sec mb-3" (click)="openCreateTodo()">
-                <span class="material-symbols-outlined text-dark">add</span>
-                <span class="title text-dark" title="create task">add new task</span>
+                <span class="material-symbols-outlined">add</span>
+                <span class="title" title="create task">add new task</span>
             </a>
         </div>
 
@@ -15,6 +15,9 @@
             <div
                 class="card"
                 [style.border]="item.status == 'completed' ? '1px solid #66D9E8' : item.status == 'inprogress' ? '1px solid #FFD43B' : '1px solid #FF6B6B'">
+                <div class="checkbox-sec">
+                    <input type="checkbox" [(ngModel)]="item.checked" (change)="getStriked(item)">
+                </div>
                 <a class="dot-sec">
                     <p class="dot me-1"
                         [style.background-color]="item.status == 'completed' ? '#66D9E8' : item.status == 'inprogress' ? '#FFD43B' : '#FF6B6B'">
@@ -23,7 +26,7 @@
                 </a>
 
                 <div class="card-details">
-                    <p class="text-title">{{item.title}}</p>
+                    <p class="text-title" [style.text-decoration]="item.checked ? 'line-through' : 'none'">{{item.title}}</p>
                     <p class="text-body">Here are the details of the card</p>
                     <p class="text-center fw-bold text-danger">Due in&nbsp;{{getDueDays(item.date)}}&nbsp; days</p>
                 </div>

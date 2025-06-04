@@ -120,6 +120,17 @@
     margin-top: 2px;
 }
 
+.checkbox-sec {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.checkbox-sec input{
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .dot-sec {
     position: absolute;
     top: 15px;
